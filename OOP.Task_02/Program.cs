@@ -2,7 +2,7 @@
 
 MissionOperations operations = new MissionOperations();
 
-operations.Create(new Mission()
+operations.Create(new()
 {
     Id = 1,
     CreatedDate = DateTime.Now,
@@ -12,7 +12,7 @@ operations.Create(new Mission()
     Status = "Is not Deliveried"
 });
 
-operations.Update(new Mission()
+operations.Update(new()
 {
     Id = 1,
     Name = "Changed Test",
