@@ -12,7 +12,15 @@ operations.Create(new Mission()
     Status = "Is not Deliveried"
 });
 
-operations.Delete(1);
+operations.Update(new Mission()
+{
+    Id = 1,
+    Name = "Changed Test",
+    Description = "Changed Description !",
+    Status = "Success",
+    ExpirationDate = DateTime.Now.AddDays(30)
+}, 1);
 Console.WriteLine(operations.RetrieveById(1));
+operations.Delete(1);
 
 Console.WriteLine(operations.Count());

@@ -34,7 +34,10 @@ public sealed class MissionOperations
 
         for (int i = 0 ; i < missions.Length ; i++)
             if (missions[i].Id == id)
+            {
                 missions[i] = null;
+                break;
+            }
 
         Resize(missions.Length - 1);
     }
@@ -44,7 +47,10 @@ public sealed class MissionOperations
 
         for (int i = 0 ; i < missions.Length ; i++)
             if (missions[i].Id == id)
+            {
                 isFounded = true;
+                break;
+            }
 
         return isFounded;
     }
